@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="192dp"
+    android:layout_height="304dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="12dp"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardUseCompatPadding="true"
+    android:elevation="3dp"
+    android:id="@+id/cardViewNote">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@drawable/custom_edit1"-->
+<!--        android:backgroundTint="#F7DEE3"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewNoteTitle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:ellipsize="marquee"-->
+<!--            android:marqueeRepeatLimit="marquee_forever"-->
+<!--            android:textStyle="bold"-->
+<!--            android:maxLines="2"-->
+<!--            android:text="@string/title"-->
+<!--            android:textSize="24sp" />-->
+
+<!--        <ImageView-->
+<!--            android:background="@drawable/custom_edit3"-->
+<!--            android:id="@+id/imageViewNote"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:maxHeight="96dp"-->
+<!--            android:scaleType="centerCrop"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textViewNoteDescription"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:ellipsize="end"-->
+<!--            android:maxLines="10"-->
+<!--            android:text="Note"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp" />-->
+<!--    </LinearLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_edit1"
+        android:backgroundTint="@color/white"
+        android:outlineSpotShadowColor="@color/black">
+
+        <TextView
+            android:id="@+id/textViewNoteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:text="@string/title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewNote"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/custom_edit3"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="16:12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNoteTitle" />
+
+        <TextView
+            android:id="@+id/textViewNoteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:maxLines="10"
+            android:text="Note"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewNote" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

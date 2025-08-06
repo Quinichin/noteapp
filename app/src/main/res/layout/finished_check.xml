@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_marginHorizontal="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Finished!"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/thrMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="messagethree"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Undo"
+                android:textColor="@color/primary_base"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                app:strokeColor="@color/primary_base"
+                app:strokeWidth="2dp"
+                app:backgroundTint="@android:color/white"
+                app:cornerRadius="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:layout_marginEnd="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/finishedNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                app:strokeColor="@color/primary_base"
+                app:strokeWidth="2dp"
+                app:backgroundTint="@color/primary_base"
+                app:cornerRadius="20dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

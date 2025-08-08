@@ -430,6 +430,7 @@ class NoteViewFragment : Fragment() {
             note = note.copy(Finished = true)
             noteViewModel.updateNote(requireContext(), note)
             dialog.dismiss()
+            navigateToNoteList()
         }
         dialog.show()
     }

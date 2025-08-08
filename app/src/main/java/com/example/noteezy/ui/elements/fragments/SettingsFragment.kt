@@ -38,7 +38,7 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // hien thi thong tin nguoi dung
+        // hiển thị thông tin người dùng
         val user = Firebase.auth.currentUser
         binding.apply {
 
@@ -52,6 +52,7 @@ class SettingsFragment : Fragment() {
                 val message : String? = "Are you sure want to log out from the application"
                 ShowCustomDialogBox(message)
             }
+
             // Xử lý tab bar
             tabHome.setOnClickListener {
                 findNavController().navigate(R.id.action_settingsFragment_to_noteListFragment)

@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/bin"/>
@@ -34,6 +35,8 @@
             android:id="@+id/fstMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Are you sure you want to delete the selected note"
             android:gravity="center"
             android:textSize="16dp"
@@ -43,6 +46,8 @@
             android:id="@+id/sndMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Deleting note means it will be removed permanently"
             android:gravity="center"
             android:textSize="16dp"
@@ -53,23 +58,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/cancelDelete"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
                 android:text="Cancel"
                 android:textColor="@color/primary_base"
                 android:textStyle="bold"
-                android:fontFamily="sans-serif-medium"
-                app:strokeColor="@color/primary_base"
-                app:strokeWidth="2dp"
                 app:backgroundTint="@android:color/white"
                 app:cornerRadius="20dp"
-                android:paddingHorizontal="20dp"
-                android:paddingVertical="10dp"
-                android:layout_marginEnd="16dp"/>
+                app:strokeColor="@color/primary_base"
+                app:strokeWidth="2dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/deleteNow"

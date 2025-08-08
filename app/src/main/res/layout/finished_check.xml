@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <ImageView
             android:layout_marginTop="10dp"
@@ -25,7 +27,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Finished!"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
@@ -34,6 +36,8 @@
             android:id="@+id/thrMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="The selected note has been mark as finished , and move to Finished menu"
             android:gravity="center"
             android:textSize="16dp"
@@ -44,7 +48,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/cancelUndo"
@@ -60,7 +65,7 @@
                 app:cornerRadius="20dp"
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp"
-                android:layout_marginEnd="16dp"/>
+                android:layout_marginEnd="24dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/finishedNow"

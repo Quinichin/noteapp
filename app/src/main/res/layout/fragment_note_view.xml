@@ -19,7 +19,6 @@
 
     <!-- Back Text -->
 
-
     <!-- Main content area -->
 
     <!-- Bottom Bar Barrier -->
@@ -41,7 +40,6 @@
             android:padding="16dp">
 
             <!-- Lightbulb Icon -->
-
 
             <!-- Title EditText -->
             <TextView

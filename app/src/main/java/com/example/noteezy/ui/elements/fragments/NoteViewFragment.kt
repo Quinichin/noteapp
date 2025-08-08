@@ -368,17 +368,19 @@ class NoteViewFragment : Fragment() {
             }
 
             markFinished.setOnClickListener {
-                note = note.copy(Finished = true)
-                noteViewModel.updateNote(requireContext(), note)
+                //note = note.copy(Finished = true)
+                //noteViewModel.updateNote(requireContext(), note)
                 bottomSheetDialog.dismiss()
+                showMarkFinishedDialog()
             }
 
             delete.setOnClickListener {
-                note.id?.let { noteId ->
-                    binding.progressBarNoteDeletion.isVisible = true
-                    noteViewModel.deleteNote(noteId)
-                } ?: showSnackBar("Không thể xóa. Ghi chú không hợp lệ.")
+                //note.id?.let { noteId ->
+                //    binding.progressBarNoteDeletion.isVisible = true
+                //    noteViewModel.deleteNote(noteId)
+                //} ?: showSnackBar("Không thể xóa. Ghi chú không hợp lệ.")
                 bottomSheetDialog.dismiss()
+                showDeleteConfirmationDialog()
             }
 
             closeButton.setOnClickListener {
@@ -386,6 +388,50 @@ class NoteViewFragment : Fragment() {
             }
         }
         bottomSheetDialog.show()
+    }
+
+    private fun showDeleteConfirmationDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(true)
+        dialog.setContentView(R.layout.deleting_check)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val cancelDelete = dialog.findViewById<MaterialButton>(R.id.cancelDelete)
+        val deleteNow = dialog.findViewById<MaterialButton>(R.id.deleteNow)
+
+        cancelDelete.setOnClickListener {
+            dialog.dismiss()
+        }
+        deleteNow.setOnClickListener {
+            note.id?.let { noteId ->
+                binding.progressBarNoteDeletion.isVisible = true
+                noteViewModel.deleteNote(noteId)
+            } ?: showSnackBar("Không thể xóa. Ghi chú không hợp lệ.")
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+
+    private fun showMarkFinishedDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(true)
+        dialog.setContentView(R.layout.finished_check)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val cancelUndo = dialog.findViewById<MaterialButton>(R.id.cancelUndo)
+        val finishedNow = dialog.findViewById<MaterialButton>(R.id.finishedNow)
+
+        cancelUndo.setOnClickListener {
+            dialog.dismiss()
+        }
+        finishedNow.setOnClickListener {
+            note = note.copy(Finished = true)
+            noteViewModel.updateNote(requireContext(), note)
+            dialog.dismiss()
+        }
+        dialog.show()
     }
 
     private fun showDateTimePicker() {

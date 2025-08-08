@@ -116,19 +116,14 @@ import kotlinx.coroutines.launch
 
 class NoteViewModel : ViewModel() {
     private val noteRepository: NoteRepository by lazy { NoteRepository() }
-
     private val _notesResultStatus = MutableLiveData<ResultStatus<MutableList<Note>>>()
     val notesResultStatus: LiveData<ResultStatus<MutableList<Note>>> = _notesResultStatus
-
     private val _searchResultStatus = MutableLiveData<ResultStatus<MutableList<Note>>>()
     val searchResultStatus: LiveData<ResultStatus<MutableList<Note>>> = _searchResultStatus
-
     private val _noteAddResultStatus = MutableLiveData<ResultStatus<Note>?>()
     val noteAddResultStatus: LiveData<ResultStatus<Note>?> = _noteAddResultStatus
-
     private val _noteUpdateResultStatus = MutableLiveData<ResultStatus<Note>?>()
     val noteUpdateResultStatus: LiveData<ResultStatus<Note>?> = _noteUpdateResultStatus
-
     private val _noteDeleteStatus = MutableLiveData<EmptyResult?>()
     val noteDeleteStatus: LiveData<EmptyResult?> = _noteDeleteStatus
 

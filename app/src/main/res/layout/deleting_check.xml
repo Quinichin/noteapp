@@ -28,7 +28,7 @@
             android:id="@+id/fstMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="messageone"
+            android:text="Are you sure you want to delete the selected note"
             android:gravity="center"
             android:textSize="16dp"
             android:layout_marginTop="20dp"/>
@@ -37,7 +37,7 @@
             android:id="@+id/sndMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="messagetwo"
+            android:text="Deleting note means it will be removed permanently"
             android:gravity="center"
             android:textSize="16dp"
             android:layout_marginTop="20dp"/>

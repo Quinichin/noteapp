@@ -21,5 +21,5 @@ data class Note(
     var Finished: Boolean = false,
     var category: String? = null,
     var imageBase64: String? = null //( Lưu chuỗi Base64 của ảnh )
-    //var backgroundColor: String? = "#FFFFFF" // Add this line
+    //var backgroundColor: String? = "#FFFFFF"
 ) : Parcelable

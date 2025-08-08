@@ -28,7 +28,7 @@
             android:id="@+id/thrMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="messagethree"
+            android:text="The selected note has been mark as finished , and move to Finished menu"
             android:gravity="center"
             android:textSize="16dp"
             android:layout_marginTop="20dp"/>

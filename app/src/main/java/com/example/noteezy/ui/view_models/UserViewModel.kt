@@ -12,7 +12,6 @@ class UserViewModel : ViewModel() {
         UserRepository()
     }
 
-
     /**
      * Add User to firebase database
      * @param user: User
